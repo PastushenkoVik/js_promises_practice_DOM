@@ -8,7 +8,7 @@ const firstPromise = new Promise((resolve, reject) => {
     resolve(`First promise was resolved`);
   }
 
-  document.addEventListener('click', () => firstPromiseHandler());
+  document.addEventListener('click', firstPromiseHandler);
 
   setTimeout(() => {
     reject(new Error(`First promise was rejected`));
