@@ -4,7 +4,9 @@ let leftButtonDown = false;
 let rightButtonDown = false;
 
 const firstPromise = new Promise((resolve, reject) => {
-  const firstPromiseHandler = () => resolve(`First promise was resolved`);
+  function firstPromiseHandler() {
+    resolve(`First promise was resolved`);
+  }
 
   document.addEventListener('click', () => firstPromiseHandler());
 
@@ -40,16 +42,6 @@ const thirdPromise = new Promise((resolve) => {
       resolve(`Third promise was resolved`);
     }
   });
-
-  // document.addEventListener('mouseup', (eUp) => {
-  //   if (eUp.button === 0) {
-  //     leftButtonDown = false;
-  //   }
-  //
-  //   if (eUp.button === 2) {
-  //     rightButtonDown = false;
-  //   }
-  // });
 });
 
 const messenger = (message, type) => {
