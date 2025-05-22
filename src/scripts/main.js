@@ -42,6 +42,16 @@ const thirdPromise = new Promise((resolve) => {
       resolve(`Third promise was resolved`);
     }
   });
+
+  document.addEventListener('mouseup', (eUp) => {
+    if (eUp.button === 0) {
+      leftButtonDown = false;
+    }
+
+    if (eUp.button === 2) {
+      rightButtonDown = false;
+    }
+  });
 });
 
 const messenger = (message, type) => {
